@@ -33,18 +33,7 @@ var mp3filePathSave;
 var mp3file; 
 
 
-let ftpConfig = {
-    host: "ftp.audiobeing.com", /// FTP server
-    port: 21, 
-    user: 'audio@audiobeing.com', /// FTP Username
-    password: 'ftptesting', /// Password (this is a simple test - only to be used on a local computer do not upload passwords to git or the web generally)
-}
-// let ftpConfig = {
-//      host: "ftp.darrencopeland.net", /// FTP server
-//      port: 21, 
-//      user: 'AbsentListenerAuto@darrencopeland.net', /// FTP Username
-//      password: 'IanTryOutDis!!', /// Password (this is a simple test - only to be used on a local computer do not upload passwords to git or the web generally)
-// }
+
 //create a connection to ftp server
 ftp_client.connect(ftpConfig);
 ftp_client.on('ready', function() {
