@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 741.0, 79.0, 905.0, 765.0 ],
+		"rect" : [ 741.0, 118.0, 905.0, 765.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,94 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-17",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 625.0, 39.0, 243.0, 87.0 ],
+					"text" : "1. download node\n2. push npm install\n3. connect toggle to small bit of code A\n4. put AbsentListener_serveraudio file path in the ald1.js file\n5. start script (loadbang)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 432.0, 105.0, 45.0, 22.0 ],
+					"text" : "s node"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 432.0, 71.0, 125.0, 22.0 ],
+					"text" : "prepend rec_filename"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 432.0, 39.0, 85.0, 22.0 ],
+					"text" : "r rec_filename"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 343.52270499999986, 646.0, 196.0, 20.0 ],
+					"text" : "A. connet to recording toggle"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 95.02270499999986, 39.0, 67.0, 22.0 ],
+					"text" : "delay 2000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 95.02270499999986, 7.0, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 29.5, 77.0, 43.0, 22.0 ],
+					"patching_rect" : [ 38.5, 113.0, 43.0, 22.0 ],
 					"text" : "r node"
 				}
 
@@ -69,7 +151,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "" ],
-					"patching_rect" : [ 270.0, 602.0, 60.0, 22.0 ],
+					"patching_rect" : [ 279.5, 614.0, 60.0, 22.0 ],
 					"text" : "select 0 1"
 				}
 
@@ -92,7 +174,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 283.0, 77.0, 48.0, 22.0 ],
+					"patching_rect" : [ 292.0, 113.0, 48.0, 22.0 ],
 					"text" : "convert"
 				}
 
@@ -142,7 +224,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 104.0, 799.0, 681.0 ],
+						"rect" : [ 59.0, 104.0, 1123.0, 799.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -427,16 +509,16 @@
 									"bgfillcolor_type" : "color",
 									"gradient" : 1,
 									"id" : "obj-18",
-									"linecount" : 9,
+									"linecount" : 7,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 657.0, 383.0, 98.0, 129.0 ],
 									"presentation" : 1,
-									"presentation_linecount" : 4,
+									"presentation_linecount" : 3,
 									"presentation_rect" : [ 276.0, 148.0, 310.0, 62.0 ],
-									"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absentListener/absentListener_d1/AbsentListener_serveraudio/testaudio0.aiff",
+									"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/absentListener_d1/s/testaudio.aiff",
 									"textcolor" : [ 0.019607843137255, 0.019607843137255, 0.019607843137255, 1.0 ]
 								}
 
@@ -1124,7 +1206,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 832.0, 727.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1173,7 +1255,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 426.5, 368.0, 50.0, 35.0 ],
-									"text" : "/testaudio0"
+									"text" : "/testaudio2"
 								}
 
 							}
@@ -1242,13 +1324,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-25",
-									"linecount" : 18,
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 135.833333333333258, 332.0, 50.0, 250.0 ],
-									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absentListener/absentListener_d1/AbsentListener_serveraudio/testaudio0.aiff"
+									"patching_rect" : [ 72.833333333333258, 467.0, 321.666666666666742, 35.0 ],
+									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/absentListener_d1/s/testaudio.aiff"
 								}
 
 							}
@@ -1309,7 +1391,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 205.5, 169.0, 49.0 ],
-									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absentListener/absentListener_d1/"
+									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/absentListener_d1/"
 								}
 
 							}
@@ -1375,7 +1457,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-25", 1 ],
-									"order" : 1,
+									"order" : 0,
 									"source" : [ "obj-15", 0 ]
 								}
 
@@ -1383,7 +1465,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-26", 0 ],
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-15", 0 ]
 								}
 
@@ -1544,8 +1626,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.0, 143.0, 505.0, 22.0 ],
-					"text" : "\"File AbsentListener_serveraudio/testaudio0.aiff has been added\""
+					"patching_rect" : [ 95.0, 179.0, 505.0, 22.0 ],
+					"text" : "\"File AbsentListener_serveraudio/trash-test.mp3 has been added\""
 				}
 
 			}
@@ -1556,7 +1638,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 165.0, 35.0, 98.0, 22.0 ],
+					"patching_rect" : [ 174.0, 71.0, 98.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 158.0, 68.0, 98.0, 22.0 ],
 					"text" : "script npm install"
@@ -1570,7 +1652,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.0, 65.0, 63.0, 22.0 ],
+					"patching_rect" : [ 95.0, 101.0, 63.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 86.0, 83.0, 63.0, 22.0 ],
 					"text" : "script stop"
@@ -1584,7 +1666,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.02270499999986, 35.0, 64.0, 22.0 ],
+					"patching_rect" : [ 95.02270499999986, 71.0, 64.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 86.0, 57.0, 64.0, 22.0 ],
 					"text" : "script start"
@@ -1606,7 +1688,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 86.0, 183.0, 400.0, 220.0 ],
+					"patching_rect" : [ 95.0, 219.0, 400.0, 220.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 86.0, 131.0, 511.0, 278.0 ],
 					"viewvisibility" : 1
@@ -1620,7 +1702,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 86.0, 107.0, 177.0, 22.0 ],
+					"patching_rect" : [ 95.0, 143.0, 177.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 86.0, 107.0, 177.0, 22.0 ],
 					"saved_object_attributes" : 					{
@@ -1732,6 +1814,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-52", 0 ],
 					"source" : [ "obj-18", 0 ]
 				}
@@ -1748,6 +1837,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -1790,6 +1886,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-41", 1 ],
 					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-58", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -1844,6 +1947,13 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
 			"obj-36" : [ "live.gain~[4]", "live.gain~", 0 ],
@@ -1856,7 +1966,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "ald1.js",
-				"bootpath" : "~/git-projects/absentListener/absentListener_d1",
+				"bootpath" : "~/git-projects/absent_listener/absentListener_d1",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
