@@ -1,3 +1,8 @@
+# mis
+audio/
+AbsentListener_serveraudio/
+absentlistener/
+
 # Logs
 logs
 *.log
