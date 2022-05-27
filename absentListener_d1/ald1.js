@@ -2,6 +2,7 @@
 const max = require('max-api')
 /// file watch
 const chokidar = require("chokidar"); 
+/// NEED FILEPATH HERE AS WELL
 const watcher = chokidar.watch('AbsentListener_serveraudio', { persistent: true });
 var filePath = null; 
 /// ftp client
@@ -24,6 +25,7 @@ var handlers = {
 }
 max.addHandlers(handlers)
 
+var date; 
 let ftpConfig = {
     host: "ftp.audiobeing.com", /// FTP server
     port: 21, 
@@ -59,6 +61,13 @@ watcher
         })
         .on('end', () => {
             logs('Processing finished !');
+            // get current date --> UTC 
+            date = new Date(); 
+            date = date.getTime(); 
+            logs("date", date); 
+            // need filepath to absentlistener audio ******** 
+            // convert to mp3 with same name (could delete -- later )
+            // get the fileName from filePath and set below
             ftp_client.put('AbsentListener_serveraudio/trash-test.mp3', 'MP3testSmall.mp3', function(err) {
                 if (err) throw err;
                 ftp_client.end();
