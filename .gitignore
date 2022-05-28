@@ -2,7 +2,10 @@
 audio/
 AbsentListener_serveraudio/
 absentlistener/
-
+config.json
+config_ian.json
+config_darren.json
+archive/
 # Logs
 logs
 *.log
