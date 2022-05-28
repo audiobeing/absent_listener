@@ -2,7 +2,8 @@ const max = require('max-api'); /// require max api
 const chokidar = require("chokidar"); /// file watch package
 
 /// DARREN _ HERE: ADD FILEPATH HERE: replace 'AbsentListener_serveraudio' with something like  '/Users/naisambpro/Music/AbsentListener_serveraudio/'
-const watcher = chokidar.watch('AbsentListener_serveraudio', { persistent: true });
+let config = require("./config.json"); //private ftp configuration file - DO NOT SAVE TO GITHUB
+const watcher = chokidar.watch(config.folder, { persistent: true });
 var filePath = null; 
 
 const FTPClient = require('ftp'); /// ftp client package
@@ -28,12 +29,11 @@ var mp3filePath;
 var mp3filePathSave; 
 var mp3file; 
 
-let ftpConfig = require("./config.json"); //private ftp configuration file - DO NOT SAVE TO GITHUB
 
 //create a connection to ftp server
-    ftp_client.connect(ftpConfig);
+    ftp_client.connect(config);
     ftp_client.on('ready', function() {
-        logs(`Connected to ${ftpConfig.user}`)
+        logs(`Connected to ${config.user}`)
         
     });
     ftp_client.on('close', function(){
@@ -46,7 +46,7 @@ watcher
       var test = path.split(".")
       test = test[test.length-1]; 
       if(test == "aiff" || test == "wav"){
-        max.post("AIFF")
+        max.post("filePath = "+path)
         filePath = path; 
       }
       
@@ -61,9 +61,9 @@ watcher
     }
     var test = path.split(".")
       test = test[test.length-1]; 
-      max.post(`CHANGES IN FOLDER:::: &&& ${path}`)
+      logs(`FILE SAVED/CHANGED::: ${path}`)
       if(test == "aiff" || test == "wav"){
-        max.post("AIFF SAVED: call convert"); 
+        logs("AIFF SAVED: call convert"); 
         convertToMP3()
       }
       if(test == "mp3"){
@@ -92,8 +92,8 @@ async function convertToMP3(){
     mp3filePathSave = `./${mp3filePathSave[0]}_${date}.mp3`  
     mp3file = mp3filePath.split("/"); 
     mp3file = mp3file[mp3file.length-1]
-    max.post("date", mp3filePath, mp3file);  
-    max.post("ffmpeg", filePath)
+    // max.post("date", mp3filePath, mp3file);  
+    // max.post("ffmpeg", filePath)
     ffmpeg(filePath)
         // .audioBitrate(320)
         .toFormat('mp3')
