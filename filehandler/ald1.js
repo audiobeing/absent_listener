@@ -1,7 +1,6 @@
 const max = require('max-api'); /// require max api
 const chokidar = require("chokidar"); /// file watch package
 
-/// DARREN _ HERE: ADD FILEPATH HERE: replace 'AbsentListener_serveraudio' with something like  '/Users/naisambpro/Music/AbsentListener_serveraudio/'
 let config = require("./config.json"); //private ftp configuration file - DO NOT SAVE TO GITHUB
 const watcher = chokidar.watch(config.folder, { persistent: true });
 var filePath = null; 
@@ -18,8 +17,8 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 
 /// setup functions/etc called from max
 var handlers = {
-"convert": convertToMP3, 
-"rec_filename": rec_filename
+    "convert": convertToMP3, 
+    "rec_filename": rec_filename
 }
 max.addHandlers(handlers)
 
@@ -89,7 +88,7 @@ async function convertToMP3(){
     date = date.getTime(); 
     mp3filePathSave = filePath.split('.');
     mp3filePath = `${mp3filePathSave[0]}_${date}.mp3`
-    mp3filePathSave = `./${mp3filePathSave[0]}_${date}.mp3`  
+    mp3filePathSave = `${mp3filePathSave[0]}_${date}.mp3`  /// error here with ./ - this mean current directory
     mp3file = mp3filePath.split("/"); 
     mp3file = mp3file[mp3file.length-1]
     // max.post("date", mp3filePath, mp3file);  

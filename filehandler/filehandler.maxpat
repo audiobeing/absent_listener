@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 993.0, 227.0, 581.0, 427.0 ],
+		"rect" : [ 540.0, 227.0, 1034.0, 656.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -83,6 +83,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -129,7 +130,46 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"visible" : 1,
 										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-20",
+													"linecount" : 16,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 878.0, 267.0, 50.0, 223.0 ],
+													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-19",
+													"linecount" : 16,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 806.0, 509.0, 50.0, 223.0 ],
+													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-7",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 2,
+													"outlettype" : [ "int", "bang" ],
+													"patching_rect" : [ 243.0, 201.0, 29.5, 22.0 ],
+													"text" : "t i b"
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"id" : "obj-17",
 													"maxclass" : "newobj",
@@ -386,16 +426,16 @@
 													"bgfillcolor_type" : "color",
 													"gradient" : 1,
 													"id" : "obj-18",
-													"linecount" : 7,
+													"linecount" : 6,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 657.0, 383.0, 122.0, 102.0 ],
+													"patching_rect" : [ 657.0, 383.0, 122.0, 89.0 ],
 													"presentation" : 1,
 													"presentation_linecount" : 3,
 													"presentation_rect" : [ 276.0, 148.0, 338.0, 49.0 ],
-													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/filehandler/AbsentListener_serveraudio/testaudio9.aiff",
+													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff",
 													"textcolor" : [ 0.019607843137255, 0.019607843137255, 0.019607843137255, 1.0 ]
 												}
 
@@ -771,7 +811,16 @@
 											}
 , 											{
 												"patchline" : 												{
+													"destination" : [ "obj-19", 1 ],
+													"order" : 0,
+													"source" : [ "obj-18", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-21", 1 ],
+													"order" : 1,
 													"source" : [ "obj-18", 0 ]
 												}
 
@@ -888,7 +937,7 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-1", 0 ],
+													"destination" : [ "obj-7", 0 ],
 													"source" : [ "obj-4", 0 ]
 												}
 
@@ -953,6 +1002,15 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-2", 0 ],
+													"order" : 1,
+													"source" : [ "obj-5", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-20", 1 ],
+													"order" : 0,
 													"source" : [ "obj-5", 0 ]
 												}
 
@@ -998,6 +1056,20 @@
 													"destination" : [ "obj-76", 0 ],
 													"order" : 0,
 													"source" : [ "obj-65", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-1", 0 ],
+													"source" : [ "obj-7", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-42", 0 ],
+													"source" : [ "obj-7", 1 ]
 												}
 
 											}
@@ -1355,6 +1427,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-5",
@@ -1376,7 +1449,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 426.5, 368.0, 50.0, 35.0 ],
-									"text" : "/testaudio9"
+									"text" : "/testaudio1"
 								}
 
 							}
@@ -1425,7 +1498,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
-									"patching_rect" : [ 396.5, 239.5, 61.0, 22.0 ],
+									"patching_rect" : [ 441.5, 269.0, 61.0, 22.0 ],
 									"text" : "counter"
 								}
 
@@ -1451,7 +1524,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 72.833333333333258, 467.0, 337.666666666666742, 35.0 ],
-									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/filehandler/AbsentListener_serveraudio/testaudio9.aiff"
+									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff"
 								}
 
 							}
@@ -1506,13 +1579,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"linecount" : 3,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 205.5, 169.0, 49.0 ],
-									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/filehandler/"
+									"patching_rect" : [ 39.0, 234.5, 331.0, 22.0 ],
+									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/"
 								}
 
 							}
@@ -1609,13 +1681,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-17", 0 ],
 									"source" : [ "obj-19", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-6", 1 ],
-									"source" : [ "obj-19", 2 ]
 								}
 
 							}

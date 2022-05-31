@@ -7,7 +7,7 @@
 1. download node if it is not currently installed
 2. clone or download zip of absentlistener_filehandler
 3. setup PRIVATE config file - DO NOT SAVE TO GITHUB
-    - create a json file with the following info and save in the filehandler folder : 
+    - create a json file called config.json with the following info and save in the filehandler folder : 
     
 <br/>
 <img src="filehandler/assets/json.png" alt="drawing" width="70%" />
