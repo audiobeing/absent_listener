@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 540.0, 227.0, 1034.0, 656.0 ],
+		"rect" : [ 734.0, 153.0, 811.0, 596.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -55,7 +55,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1365.0, 151.0, 252.0, 432.0 ],
+						"rect" : [ 1064.0, 107.0, 582.0, 711.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -83,7 +83,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -102,7 +101,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 59.0, 104.0, 1123.0, 799.0 ],
+										"rect" : [ 232.0, 217.0, 1123.0, 799.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -130,30 +129,29 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-20",
-													"linecount" : 16,
+													"linecount" : 15,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 878.0, 267.0, 50.0, 223.0 ],
-													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff"
+													"patching_rect" : [ 878.0, 267.0, 50.0, 210.0 ],
+													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/filehandler/archive/s/testaudio.aiff"
 												}
 
 											}
 , 											{
 												"box" : 												{
 													"id" : "obj-19",
-													"linecount" : 16,
+													"linecount" : 15,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 806.0, 509.0, 50.0, 223.0 ],
-													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff"
+													"patching_rect" : [ 806.0, 509.0, 50.0, 210.0 ],
+													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/filehandler/archive/s/testaudio.aiff"
 												}
 
 											}
@@ -435,7 +433,7 @@
 													"presentation" : 1,
 													"presentation_linecount" : 3,
 													"presentation_rect" : [ 276.0, 148.0, 338.0, 49.0 ],
-													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff",
+													"text" : "open MacintoshHD:/Users/audiobeing/git-projects/absent_listener/filehandler/archive/s/testaudio.aiff",
 													"textcolor" : [ 0.019607843137255, 0.019607843137255, 0.019607843137255, 1.0 ]
 												}
 
@@ -1129,7 +1127,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 100.0, 76.0, 33.0 ],
+									"patching_rect" : [ 50.0, 60.0, 76.0, 33.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 86.0, 437.0, 89.0, 20.0 ],
 									"text" : "play test audio"
@@ -1190,7 +1188,7 @@
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 330.0, 48.25, 48.25 ],
+									"patching_rect" : [ 50.0, 371.0, 48.25, 48.25 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 87.0, 600.0, 48.25, 48.25 ],
 									"prototypename" : "helpfile"
@@ -1205,7 +1203,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 50.0, 137.0, 70.0, 70.0 ],
+									"patching_rect" : [ 50.0, 127.0, 70.0, 70.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 86.0, 470.0, 70.0, 70.0 ]
 								}
@@ -1427,7 +1425,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-5",
@@ -1449,7 +1446,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 426.5, 368.0, 50.0, 35.0 ],
-									"text" : "/testaudio1"
+									"text" : "/testaudio2"
 								}
 
 							}
@@ -1524,7 +1521,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 72.833333333333258, 467.0, 337.666666666666742, 35.0 ],
-									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio1.aiff"
+									"text" : "MacintoshHD:/Users/audiobeing/git-projects/absent_listener/AbsentListener_serveraudio/testaudio2.aiff"
 								}
 
 							}
@@ -1894,6 +1891,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,

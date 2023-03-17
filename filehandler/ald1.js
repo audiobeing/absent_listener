@@ -2,7 +2,8 @@ const max = require('max-api'); /// require max api
 const chokidar = require("chokidar"); /// file watch package
 
 let config = require("./config.json"); //private ftp configuration file - DO NOT SAVE TO GITHUB
-const watcher = chokidar.watch(config.folder, { persistent: true });
+const watcher = chokidar.watch(config.folder, { ignoreInitial: true, persistent: true }); //https://stackoverflow.com/questions/36413417/chokidar-add-event-fired-for-all-files-in-folder
+
 var filePath = null; 
 
 const FTPClient = require('ftp'); /// ftp client package
@@ -36,14 +37,32 @@ var mp3file;
         
     });
     ftp_client.on('close', function(){
-        logs('Disconnected from ftp client')
+        logs('Disconnected from ftp client'); 
+        /// Try reconnecting .... 
     })
 
 // setup folder watcher 
 watcher
   .on('add', (path) => {
+    max.post("add")
       var test = path.split(".")
+      var fileName = test[0]; 
+      fileName = fileName.split("/"); 
+      fileName = fileName[fileName.length-1]; 
+      var lineOfText = `Title: ${fileName}`; 
+      max.post("FILENAMME",lineOfText)
       test = test[test.length-1]; 
+    //   mp3file = mp3filePath.split("/"); 
+    //   mp3file = mp3file[mp3file.length-1]
+    fs.readFile(config.textFile, 'utf8', function(err, data) {
+        let searchString = 'Title';
+        let re = new RegExp('^.*' + searchString + '.*$', 'gm'); // https://stackoverflow.com/questions/53446570/replace-a-line-in-txt-file-using-javascript
+        let formatted = data.replace(re, lineOfText);
+    
+        fs.writeFile("Now Playing.txt", formatted, 'utf8', function(err) { // here - txt file is hardcoded
+          if (err) return console.log(err);
+        });
+    });
       if(test == "aiff" || test == "wav"){
         max.post("filePath = "+path)
         filePath = path; 
@@ -55,6 +74,7 @@ watcher
   })
   .on('change', (path)=>{
     // filePath = path; 
+    max.post("change")
     if(path == filePath){
         max.post("file == filePath")
     }
@@ -67,7 +87,7 @@ watcher
       }
       if(test == "mp3"){
         max.post("MP3 SAVED: call upload to ftp"); 
-        ftpUpload(); 
+        ftpUpload(); // look into logging process and completion/error
       }
   })
   .on('save', ()=>{
