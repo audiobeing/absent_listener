@@ -103,6 +103,7 @@ async function convert(){
     .then(()=>{logs("CONVERTED")})
 }
 async function convertToMP3(){
+    ftp_client.connect(config); // added here to test
     // max.post("convert called", filePath);
     date = new Date(); 
     date = date.getTime(); 
